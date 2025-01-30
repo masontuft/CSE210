@@ -18,10 +18,16 @@ class Program
             {
                 case 1:
                     Console.WriteLine("1 selected");
-                    journal.AddEntry();
+                    journal._journal.Add(journal.AddEntry());
                     break;
                 case 2:
                     Console.WriteLine("2 selected");
+                    Console.WriteLine(journal._journal);
+                    foreach (var _entry in journal._journal)
+                    {
+                        Console.WriteLine(_entry._prompt);
+                        Console.WriteLine(_entry._entry);
+                    }
                     break;
                 case 3:
                     Console.WriteLine("3 selected");

@@ -1,10 +1,11 @@
 using System;
 
 
+
 public class Journal
 {
     public List<Entry> _journal = new List<Entry>();
-    public void AddEntry()
+    public Entry AddEntry()
     {
         Prompt prompt = new Prompt();
         Random random = new Random();
@@ -16,6 +17,12 @@ public class Journal
         userEntry._prompt = randomPrompt;
         userEntry._entry = Console.ReadLine();
         userEntry.Display();
+        return userEntry;
+    }
+
+    public void Display()
+    {
+        
     }
 }
 

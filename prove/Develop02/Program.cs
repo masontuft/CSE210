@@ -9,6 +9,7 @@ class Program
         Menu menu = new Menu();
         Journal journal = new Journal();
         bool running = true;
+        bool saved = true;
         while(running == true)
         {
             menu.Display();
@@ -17,23 +18,41 @@ class Program
             switch (choiceNum)
             {
                 case 1:
-                    Console.WriteLine("1 selected");
+                    Console.WriteLine("New Entry");
                     journal._journal.Add(journal.AddEntry());
+                    saved = false;
                     break;
                 case 2:
-                    Console.WriteLine("2 selected");
-                    Console.WriteLine(journal._journal);
-                    foreach (var _entry in journal._journal)
-                    {
-                        Console.WriteLine(_entry._prompt);
-                        Console.WriteLine(_entry._entry);
-                    }
+                    Console.WriteLine("Display Journal");
+                    // Console.WriteLine(journal._journal);
+                    journal.Display();
                     break;
                 case 3:
-                    Console.WriteLine("3 selected");
+                    Console.Write("Load Journal (Enter a File Name):\n>");
+                    journal._fileName = Console.ReadLine();
+                    if(saved == false)
+                    {
+                        journal.Save();
+                    }
+                    journal.Load();
                     break;
                 case 4:
-                    running = false;
+                    Console.Write("Save Journal (Enter a File Name):\n>");
+                    journal._fileName = Console.ReadLine();
+                    journal.Save();
+                    saved = true;
+                    break;
+                case 5:
+                    if(saved == true)
+                    {
+                        running = false;
+                    }else 
+                    {
+                        Console.WriteLine("Saving unsaved changes...");
+                        journal.Save();
+                        saved = true;
+                        running = false;
+                    }
                     break;
                 default:
                     break;

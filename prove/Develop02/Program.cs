@@ -48,7 +48,7 @@ class Program
                         running = false;
                     }else 
                     {
-                        Console.WriteLine("Saving unsaved changes...");
+                        Console.WriteLine("Saving unsaved changes to myJournal.txt...");
                         journal.Save();
                         saved = true;
                         running = false;

@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 public class Journal
 {
     public List<Entry> _journal = new List<Entry>();
-    public string _fileName = "myFile.txt";
+    public string _fileName = "myJournal.txt";
     public Entry AddEntry()
     {
         Prompt prompt = new Prompt();
@@ -37,18 +37,49 @@ public class Journal
             // You can add text to the file with the WriteLine method
             foreach (var _entry in _journal)
             {
-                outputFile.WriteLine($"Date: {_entry._date} - Prompt: {_entry._prompt} \n {_entry._entry} ");    
+                outputFile.WriteLine("---ENTRY---");
+                outputFile.WriteLine(_entry._date);
+                outputFile.WriteLine(_entry._prompt);
+                outputFile.WriteLine(_entry._entry);
+                // outputFile.WriteLine($"Date: {_entry._date} - Prompt: {_entry._prompt} \n {_entry._entry} ");    
             }
         }
     }
     public void Load()
     {
         string[] lines = System.IO.File.ReadAllLines(_fileName);
+        _journal.Clear();
+
+        Entry indexEntry = null;
 
         foreach (string line in lines)
         {
-            Console.WriteLine(line);
+            if(line == "---ENTRY---")
+            {
+                indexEntry = new Entry();
+                _journal.Add(indexEntry);
+                continue;
+            }
+
+            if (indexEntry != null)
+            {
+                if (indexEntry._date == default)
+                {
+                    indexEntry._date = DateOnly.Parse(line);
+                }
+                else if (string.IsNullOrEmpty(indexEntry._prompt))
+                {
+                    indexEntry._prompt = line;
+                }
+                else if (string.IsNullOrEmpty(indexEntry._entry))
+                {
+                    indexEntry._entry = line;
+                }
+            }
+            // Console.WriteLine(line);
+            
         }
+        Display();
     }
 }
 

@@ -14,49 +14,58 @@ class Program
         {
             menu.Display();
             string userChoice = Console.ReadLine();
-            int choiceNum = int.Parse(userChoice);
-            switch (choiceNum)
+            try
             {
-                case 1:
-                    Console.WriteLine("New Entry");
-                    journal._journal.Add(journal.AddEntry());
-                    saved = false;
-                    break;
-                case 2:
-                    Console.WriteLine("Display Journal");
-                    // Console.WriteLine(journal._journal);
-                    journal.Display();
-                    break;
-                case 3:
-                    Console.Write("Load Journal (Enter a File Name):\n>");
-                    journal._fileName = Console.ReadLine();
-                    if(saved == false)
-                    {
-                        journal.Save();
-                    }
-                    journal.Load();
-                    break;
-                case 4:
-                    Console.Write("Save Journal (Enter a File Name):\n>");
-                    journal._fileName = Console.ReadLine();
-                    journal.Save();
-                    saved = true;
-                    break;
-                case 5:
-                    if(saved == true)
-                    {
-                        running = false;
-                    }else 
-                    {
-                        Console.WriteLine("Saving unsaved changes to myJournal.txt...");
+                int choiceNum = int.Parse(userChoice);
+                switch (choiceNum)
+                {
+                    case 1:
+                        Console.WriteLine("New Entry");
+                        journal._journal.Add(journal.AddEntry());
+                        saved = false;
+                        break;
+                    case 2:
+                        Console.WriteLine("Display Journal");
+                        // Console.WriteLine(journal._journal);
+                        journal.Display();
+                        break;
+                    case 3:
+                        Console.Write("Load Journal (Enter a File Name):\n>");
+                        journal._fileName = Console.ReadLine();
+                        if(saved == false)
+                        {
+                            journal.Save();
+                        }
+                        journal.Load();
+                        break;
+                    case 4:
+                        Console.Write("Save Journal (Enter a File Name):\n>");
+                        journal._fileName = Console.ReadLine();
                         journal.Save();
                         saved = true;
-                        running = false;
-                    }
-                    break;
-                default:
-                    break;
+                        break;
+                    case 5:
+                        if(saved == true)
+                        {
+                            running = false;
+                        }else 
+                        {
+                            Console.WriteLine($"Saving unsaved changes to {journal._fileName}...");
+                            journal.Save();
+                            saved = true;
+                            running = false;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Invalid entry, please try again");
+                        break;
+                }
             }
+            catch
+            {
+                Console.WriteLine("Invalid entry, please try again");
+            }
+            
         }
     }
 }

@@ -47,6 +47,11 @@ public class Journal
     }
     public void Load()
     {
+        if (!File.Exists(_fileName))
+        {
+            Console.WriteLine($"File ({_fileName}) not found!");
+            return;
+        }
         string[] lines = System.IO.File.ReadAllLines(_fileName);
         _journal.Clear();
 

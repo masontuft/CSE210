@@ -18,7 +18,7 @@ class Program
         bool running = true;
         while (running)
         {
-            Console.WriteLine("\nPress Enter to continue or 'Q' to quit");
+            Console.WriteLine($"\nYou are working on {scripRef} Press Enter to continue or 'Q' to quit");
             ConsoleKeyInfo key = Console.ReadKey(false);
             
             if (key.Key == ConsoleKey.Enter)

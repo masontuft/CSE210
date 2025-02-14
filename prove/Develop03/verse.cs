@@ -1,19 +1,29 @@
 public class Verse 
 {
 
-    public void V()
+    Word wordRef = new Word();
+    public Verse()
     {
 
     }
 
-    public void V(string text)
+    public Verse(List<string> text)
     {
         
     }
 
-    public bool isFinished()
+    public bool isFinished(List<string> _text)
     {
-        return false;
+        bool hidden = false;
+        foreach(string word in _text)
+        {
+            hidden = wordRef.isHidden(word);
+            if(!hidden)
+            {
+                break;
+            }
+        }
+        return hidden;
     }
 
     public bool hideWord()

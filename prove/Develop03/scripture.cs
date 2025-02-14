@@ -2,10 +2,11 @@
 public class Scripture
 {
     private List<string> _text;
+    Verse verse = new Verse();
     
     public Scripture()
     {
-        
+        _text = new List<string>();
     }
 
     public Scripture(string text)
@@ -16,9 +17,10 @@ public class Scripture
 
     
     
-    public bool idFinished()
+    public bool isFinished()
     {
-        return false;
+        bool hidden = verse.isFinished(_text);
+        return hidden;
     }
 
     public bool hideWord()

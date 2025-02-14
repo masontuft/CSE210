@@ -1,18 +1,26 @@
 public class Word 
 {
-    public void W()
+    public Word()
     {
 
     }
 
-    public void W(string text)
+    public Word(string text)
     {
         
     }
 
-    public bool isHidden()
+    public bool isHidden(string word)
     {
-        return false;
+        if (word.Contains('_'))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
     }
 
     public void setHidden()

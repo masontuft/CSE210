@@ -6,7 +6,6 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
         Scripture scripture = new Scripture();
         string scripRef = "D & C 66:6";
         string text = "Tarry not many days in this place; go not up unto the land " + 
@@ -25,6 +24,12 @@ class Program
             {
                 Console.Clear();
                 Console.WriteLine("You pressed Enter - performing action!");
+                bool finished = scripture.isFinished();
+                if (!finished)
+                {
+                    Console.WriteLine("Starting program");
+                    // Start the program
+                }
                 // Continue here with classes
             }
             else if (key.Key == ConsoleKey.Q)

@@ -12,9 +12,10 @@ public class Scripture
     public Scripture(string text)
     {
         _text = text.Split(' ').ToList();
+        _text = new Verse(text);
         // Console.WriteLine(_text);
     }
-
+    
     
     
     public bool isFinished()

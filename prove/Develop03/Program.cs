@@ -28,6 +28,7 @@ class Program
                 if (!finished)
                 {
                     Console.WriteLine("Starting program");
+                    
                     // Start the program
                 }
                 // Continue here with classes

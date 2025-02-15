@@ -1,5 +1,6 @@
 public class Verse 
 {
+    private List<string> _verse;
 
     Word wordRef = new Word();
     public Verse()
@@ -7,10 +8,12 @@ public class Verse
 
     }
 
-    public Verse(List<string> text)
+    public Verse(string text)
     {
-        
+        _verse = text.Split(' ').ToList();
     }
+
+
 
     public bool isFinished(List<string> _text)
     {

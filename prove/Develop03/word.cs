@@ -1,3 +1,4 @@
+
 public class Word 
 {
     public Word()
@@ -23,10 +24,19 @@ public class Word
         
     }
 
-    public void setHidden()
+    public string setHidden(string word)
     {
-        
+        string hiddenWord = "";
+        foreach(char letter in word)
+        {
+            hiddenWord += '_';
+        }
+        return hiddenWord;
+
     }
 
-
+    // public static implicit operator List<object>(Word v)
+    // {
+    //     throw new NotImplementedException();
+    // }
 }

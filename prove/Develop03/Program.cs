@@ -24,13 +24,20 @@ class Program
             {
                 Console.Clear();
                 Console.WriteLine("You pressed Enter - performing action!");
-                bool finished = scripture.isFinished();
-                if (!finished)
+                bool finished = script1.isFinished();
+                if (finished == false)
                 {
-                    Console.WriteLine("Starting program");
-                    
+                    // Console.WriteLine("Starting program");
+                    script1.hideWord();
+                    Console.Write($"{scripRef}: ");
+                    script1.Display();
                     // Start the program
+                }else
+                {
+                    running = false;
+                    Environment.Exit(0);
                 }
+                
                 // Continue here with classes
             }
             else if (key.Key == ConsoleKey.Q)

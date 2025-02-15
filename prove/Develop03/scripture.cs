@@ -12,7 +12,7 @@ public class Scripture
     public Scripture(string text)
     {
         _text = text.Split(' ').ToList();
-        _text = new Verse(text);
+        // _text = new Verse(text);
         // Console.WriteLine(_text);
     }
     
@@ -26,6 +26,15 @@ public class Scripture
 
     public bool hideWord()
     {
+        verse.hideWord(_text);
         return false;
+    }
+
+    public void Display()
+    {
+        foreach(string word in _text)
+        {
+            Console.Write($"{word} ");
+        }
     }
 }

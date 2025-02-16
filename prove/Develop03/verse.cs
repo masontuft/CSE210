@@ -39,12 +39,8 @@ public class Verse
     public void hideWord(List<string> text)
     {
 
-        // if (text.Count == 0)
-        // {
-        //     return;  // Nothing to hide
-        // }
 
-        int count = 1;
+        int count = 0;
         while(count < 3)
         {
             int verseLength = text.Count;

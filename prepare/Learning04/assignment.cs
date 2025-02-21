@@ -1,4 +1,4 @@
-class Assignment
+public class Assignment
 {
     private string _studentName;
     private string _topic;
@@ -14,8 +14,20 @@ class Assignment
         _topic = topic;
     }
 
+    public string GetStudentName()
+    {
+        return _studentName;
+    }
+
+    public string GetTopic()
+    {
+        return _topic;
+    }
+
     public void GetSummary()
     {
         Console.WriteLine($"{_studentName} - {_topic}");
     }
+
+
 }

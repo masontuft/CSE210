@@ -20,10 +20,12 @@ class Program
             switch (userEntry)
             {
                 case "1":
-                // Breathing activity
-                    Activity breathingActivity = new Activity("Breathing Activity", "This activity will help you relax by walking through breathing " 
+                    // Breathing activity
+                    
+                    BreathingActivity breathingActivity = new BreathingActivity("Breathing Activity", "This activity will help you relax by walking through breathing " 
                     + "in an out slowly. Clearn your mind and focus on your breathing.");
                     breathingActivity.StartActivity();
+                    breathingActivity.RunActivity();
                     break;
                 case "2":
                 // reflecting activity

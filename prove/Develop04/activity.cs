@@ -43,7 +43,9 @@ public class Activity
 
     public void DisplayWellDone()
     {
+        Console.WriteLine();
         Console.WriteLine("Well done...");
+        Thread.Sleep(1000);
         // Animation
     }
 

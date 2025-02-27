@@ -29,15 +29,18 @@ class Program
                     break;
                 case "2":
                 // reflecting activity
-                    Activity reflectingActivity = new Activity("Reflecting Activity", "This activity will help you reflect on times in your life when you have shown " 
+                    ReflectionActivity reflectingActivity = new ReflectionActivity("Reflecting Activity", "This activity will help you reflect on times in your life when you have shown " 
                     + "strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
                     reflectingActivity.StartActivity();
+                    reflectingActivity.RunActivity();
+                    // reflectingActivity
                     break;
                 case "3":
                     // Listing Activity
-                    Activity listingActivity = new Activity("Listing Activity", "This activity will help you reflect on the good things in your life " 
+                    ListingActivity listingActivity = new ListingActivity("Listing Activity", "This activity will help you reflect on the good things in your life " 
                     + "by having you list as many things as you can in a certain area.");
                     listingActivity.StartActivity();
+                    listingActivity.RunActivity();
                     break;
                 case "4":
                     finished = true;

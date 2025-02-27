@@ -6,6 +6,7 @@ class Program
     {
         Console.WriteLine("Hello Develop04 World!");
         bool finished = false;
+
         while (finished == false)
         {
             Console.Clear();
@@ -20,12 +21,21 @@ class Program
             {
                 case "1":
                 // Breathing activity
+                    Activity breathingActivity = new Activity("Breathing Activity", "This activity will help you relax by walking through breathing " 
+                    + "in an out slowly. Clearn your mind and focus on your breathing.");
+                    breathingActivity.StartActivity();
                     break;
                 case "2":
                 // reflecting activity
+                    Activity reflectingActivity = new Activity("Reflecting Activity", "This activity will help you reflect on times in your life when you have shown " 
+                    + "strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
+                    reflectingActivity.StartActivity();
                     break;
                 case "3":
                     // Listing Activity
+                    Activity listingActivity = new Activity("Listing Activity", "This activity will help you reflect on the good things in your life " 
+                    + "by having you list as many things as you can in a certain area.");
+                    listingActivity.StartActivity();
                     break;
                 case "4":
                     finished = true;

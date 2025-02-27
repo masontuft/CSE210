@@ -17,16 +17,12 @@ public class BreathingActivity : Activity
         while (currentTime < futureTime)
         {
             Console.WriteLine();
-            BreatheIn(3);
-            Console.WriteLine();
-            BreatheOut(4);
-            Console.WriteLine();
-            Console.WriteLine();
             BreatheIn(4);
             Console.WriteLine();
             BreatheOut(6);
-            currentTime = DateTime.Now;
             Console.WriteLine();
+            currentTime = DateTime.Now;
+            
         }
         DisplayWellDone();
         EndActivity(4);

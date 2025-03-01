@@ -29,8 +29,22 @@ public class ReflectionActivity : Activity
     }
     public void RunActivity()
     {
-        Console.WriteLine(prompts[random.Next(0, prompts.Count)]);
-        Thread.Sleep(3000);
+        Console.Clear();
+        Console.WriteLine("Consider the follwing prompt:");
+        Console.WriteLine();
+        Console.WriteLine($"\t-{prompts[random.Next(0, prompts.Count)]}-");
+        Console.WriteLine();
+        Console.WriteLine("When you have something in mind, press enter to continue.");
+        Console.ReadLine();
+        Console.Clear();
+        Console.WriteLine("Now ponder on each of the following questions as they related to this expereince.");
+        Console.Write("You may begin in:");
+        for (int i = 3; i > 0; i--)
+        {
+            Console.Write($" {i}");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
         DateTime currentTime = DateTime.Now;

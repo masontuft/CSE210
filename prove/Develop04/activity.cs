@@ -33,7 +33,8 @@ public class Activity
         Console.Clear();
         Console.WriteLine("Get Ready...");
         // Animation
-        Thread.Sleep(5000);
+        DisplayAnimation(3);
+        // Thread.Sleep(5000);
     }
 
     public void DisplayCountdown(int time)
@@ -45,13 +46,23 @@ public class Activity
     {
         Console.WriteLine();
         Console.WriteLine("Well done...");
+        Console.WriteLine($"You have completed {_duration} seconds of {_name}.");
         Thread.Sleep(1000);
         // Animation
     }
 
-    public void DisplayAnimation(string message, int time) 
+    public void DisplayAnimation(int time) 
     {
-
+        for (int i = time; i > 0; i--)
+        {
+            Console.Write(".");
+            Thread.Sleep(1200);
+        }
+        for (int i = time; i > 0; i--)
+        {
+            Console.Write("\b \b");
+        }
+        // Console.Write("\b \b");
     }
 
     public void EndActivity(int time)

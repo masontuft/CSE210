@@ -24,8 +24,18 @@ public class Activity
         Console.WriteLine();
         Console.Write("How long in seconds would you like for your session? ");
         string userInput = Console.ReadLine();
-        _duration = int.Parse(userInput);
-        GetReady();
+        try
+        {
+            _duration = int.Parse(userInput);
+            GetReady();
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine($"An Error occured: {error.Message}");
+            Thread.Sleep(2000);
+            StartActivity();
+        }
+        
     }
 
     public void GetReady()

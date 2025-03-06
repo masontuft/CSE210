@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         // Console.WriteLine("Hello Learning05 World!");
-        Square square = new Square(5, "blue");
+         Square square = new Square(5, "blue");
         Console.WriteLine($"Square area: {square.GetArea()}");
         Console.WriteLine($"Square color: {square.GetColor()}");
         square.SetColor("red");
@@ -20,6 +20,17 @@ class Program
         Console.WriteLine($"Rectangle color: {rectangle.GetColor()}");
         rectangle.SetColor("orange");
         Console.WriteLine($"Rectangle color: {rectangle.GetColor()}");
+
+
+        List<Shape> shapes = new List<Shape>();
+        shapes.Add(square);
+        shapes.Add(circle);
+        shapes.Add(rectangle);
+        foreach (Shape shape in shapes)
+        {
+            Console.WriteLine($"Shape area: {shape.GetArea()}");
+            Console.WriteLine($"Shape color: {shape.GetColor()}");
+        }
         
     }
 }

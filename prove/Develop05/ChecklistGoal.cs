@@ -3,14 +3,14 @@ public class ChecklistGoal : Goal
     private int _totalTimes;
     private int _bonusPoints;
     private int _timesCompleted;
-    public ChecklistGoal(string name, string description, int points, int totalTimes, int bonusPoints) : base(points, name, description)
+    public ChecklistGoal(string name, string description, int points, int totalTimes, int bonusPoints, int timesCompleted) : base(points, name, description)
     {
         _points = points;
         _name = name;
         _desc = description;
         _totalTimes = totalTimes;
         _bonusPoints = bonusPoints;
-        _timesCompleted = 0;
+        _timesCompleted = timesCompleted;
     }
     public ChecklistGoal() : base()
     {
@@ -34,12 +34,19 @@ public class ChecklistGoal : Goal
 
     public override void Display()
     {
-        Console.WriteLine($"Checklist Goal: {_name} - {_desc} ({_points} points) - {_timesCompleted}/{_totalTimes} completed");
+        if (_timesCompleted == _totalTimes)
+        {
+            Console.WriteLine($"[X]Checklist Goal: {_name} - {_desc} ({_points} points) - {_timesCompleted}/{_totalTimes} completed");
+        }
+        else
+        {
+            Console.WriteLine($"[ ]Checklist Goal: {_name} - {_desc} ({_points} points) - {_timesCompleted}/{_totalTimes} completed");
+        }
     }
 
-    public override Goal GetRep()
+    public override string GetRep()
     {
-        return new ChecklistGoal(_name, _desc, _points, _totalTimes, _bonusPoints);
+        return "ChecklistGoal~" + _name + "~" + _desc + "~" + _points + "~" + _totalTimes + "~" + _bonusPoints + "~" + _timesCompleted;
     }
     public override int SetCompleted()
     {

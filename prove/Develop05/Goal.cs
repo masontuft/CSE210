@@ -28,7 +28,7 @@ public abstract class Goal
 
     public abstract int SetCompleted();
 
-    public abstract Goal GetRep();
+    public abstract string GetRep();
 
 
 }

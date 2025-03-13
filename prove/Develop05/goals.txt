@@ -1,0 +1,4 @@
+Total Points~1900
+SimpleGoal~Wake up~Wake up every day at 6:30~200~True
+EternalGoal~Attend the temple~Attend the temple regularly~300
+ChecklistGoal~Study the scriptures~Study the scriptures daily~100~8~1000~5

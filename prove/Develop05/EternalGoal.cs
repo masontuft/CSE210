@@ -25,12 +25,13 @@ public class EternalGoal : Goal
 
     public override void Display()
     {
-        Console.WriteLine($"Eternal Goal: {_name} - {_desc} ({_points} points)");
+
+        Console.WriteLine($"[ ]Eternal Goal: {_name} - {_desc} ({_points} points)");
     }
 
-    public override Goal GetRep()
+    public override string GetRep()
     {
-        return new EternalGoal(_name, _desc, _points);
+        return "EternalGoal~" + _name + "~" + _desc + "~" + _points;
     }
 
     public override int SetCompleted()

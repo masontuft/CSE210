@@ -2,20 +2,20 @@ using System;
 
 public class SimpleGoal : Goal
 {
-    private bool done;
-    public SimpleGoal(string name, string description, int points) : base(points, name, description)
+    private bool _done;
+    public SimpleGoal(string name, string description, int points, bool done) : base(points, name, description)
     {
         _points = points;
         _name = name;
         _desc = description;
-        done = false;
+        _done = done;
     }
     public SimpleGoal() : base()
     {
         _points = 0;
         _name = "";
         _desc = "";
-        done = false;
+        _done = false;
     }
     public SimpleGoal(string goal)
     {
@@ -25,22 +25,29 @@ public class SimpleGoal : Goal
 
     public override bool IsComplete()
     {
-        return done;
+        return _done;
     }
 
     public override void Display()
     {
-        Console.WriteLine($"Simple Goal: {_name} - {_desc} ({_points} points)");
+        if (_done)
+        {
+            Console.WriteLine($"[X]Simple Goal: {_name} - {_desc} ({_points} points)");
+        }
+        else
+        {
+            Console.WriteLine($"[ ]Simple Goal: {_name} - {_desc} ({_points} points)");
+        }
     }
 
-    public override Goal GetRep()
+    public override string GetRep()
     {
-        return new SimpleGoal(_name, _desc, _points);
+        return "SimpleGoal~" + _name + "~" + _desc + "~" + _points + "~" + _done;
     }
 
     public override int SetCompleted()
     {
-        done = true;
+        _done = true;
         return _points;
     }
 

@@ -142,8 +142,8 @@ class Program
                     }
                     Console.Write("Which goal did you accomplish? ");
                     int goalNum = int.Parse(Console.ReadLine());
-                    Console.WriteLine($"Consgratulations!! You have earned {goals[goalNum - 1].GetPoints()} points!");
                     totalPoints += goals[goalNum - 1].SetCompleted();
+                    Console.WriteLine($"Consgratulations!! You have earned {goals[goalNum - 1].GetPoints()} points!");
                     saved = false;
                     break;
 

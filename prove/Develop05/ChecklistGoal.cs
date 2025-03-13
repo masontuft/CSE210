@@ -27,6 +27,14 @@ public class ChecklistGoal : Goal
         // figure out how to parse the string
     }
 
+    public override int GetPoints()
+    {
+        if (_timesCompleted == _totalTimes)
+        {
+            return _points + _bonusPoints;
+        }
+        return _points;
+    }
     public override bool IsComplete()
     {
         return false;

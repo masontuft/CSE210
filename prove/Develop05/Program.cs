@@ -10,7 +10,7 @@ class Program
         int totalPoints = 0;
         List<Goal> goals = new List<Goal>();
         bool finished = false;
-        bool saved = false;
+        bool saved = true;
 
         
         while (finished == false)

@@ -51,13 +51,4 @@ public class SimpleGoal : Goal
         return _points;
     }
 
-    // public override void DisplayGoal()
-    // {
-    //     Console.WriteLine($"Simple Goal: {Name} - {Description} ({Points} points)");
-    // }
-
-    // public override void CompleteGoal()
-    // {
-    //     Console.WriteLine($"Goal '{Name}' completed! You earned {Points} points.");
-    // }
 }

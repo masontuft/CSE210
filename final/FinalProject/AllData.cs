@@ -10,19 +10,6 @@ class AllData
         {
             string[] parts = line.Split(',');
             Bike b = new Bike();
-            // b.ID = int.Parse(parts[0]);
-            // b.Brand = parts[1];
-            // b.Model = parts[2];
-            // b.Year = int.Parse(parts[3]);
-            // b.Price = decimal.Parse(parts[4]);
-            // b.Color = parts[5];
-            // b.Type = parts[6];
-            // b.Style = parts[7];
-            // b.Speeds = int.Parse(parts[8]);
-            // b.WheelSize = int.Parse(parts[9]);
-            // b.FrameSize = int.Parse(parts[10]);
-            // b.Weight = decimal.Parse(parts[11]);
-            // b.Available = bool.Parse(parts[12]);
             b.Id = int.Parse(parts[0]);
             b.ChainUsedMiles = int.Parse(parts[1]);
             b.CassetteUsedMiles = int.Parse(parts[2]);

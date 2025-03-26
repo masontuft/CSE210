@@ -18,9 +18,55 @@ public class Bike : Shop
     public int DropperUsedMiles;
     private List<Part> bike = new List<Part>();
     // Define properties and methods for the Bikes class here
+    public Bike()
+    {
+        Id = 0;
+        ChainUsedMiles = 0;
+        CassetteUsedMiles = 0;
+        FrontForkUsedMiles = 0;
+        RearShockUsedMiles = 0;
+        ChainRingUsedMiles = 0;
+        BottomBracketUsedMiles = 0;
+        SealantUsedHours = 0;
+        BrakePadsUsedMiles = 0;
+        BrakeRotorsUsedMiles = 0;
+        TiresUsedMiles = 0;
+        StravaBikeId = "Unknown";
+        StravaBikeName = "Unknown";
+        TotalMiles = 0;
+        StravaUserId = 0;
+        DropperUsedMiles = 0;
+    }
+    // public Bike(
+    //     int id, int chainUsedMiles, 
+    //     int cassetteUsedMiles, int frontForkUsedMiles, 
+    //     int rearShockUsedMiles, int chainRingUsedMiles, 
+    //     int bottomBracketUsedMiles, int sealantUsedHours, 
+    //     int brakePadsUsedMiles, int brakeRotorsUsedMiles, 
+    //     int tiresUsedMiles, string stravaBikeId, 
+    //     string stravaBikeName, int totalMiles, 
+    //     int stravaUserId, int dropperUsedMiles)
+    // {
+    //     Id = id;
+    //     ChainUsedMiles = chainUsedMiles;
+    //     CassetteUsedMiles = cassetteUsedMiles;
+    //     FrontForkUsedMiles = frontForkUsedMiles;
+    //     RearShockUsedMiles = rearShockUsedMiles;
+    //     ChainRingUsedMiles = chainRingUsedMiles;
+    //     BottomBracketUsedMiles = bottomBracketUsedMiles;
+    //     SealantUsedHours = sealantUsedHours;
+    //     BrakePadsUsedMiles = brakePadsUsedMiles;
+    //     BrakeRotorsUsedMiles = brakeRotorsUsedMiles;
+    //     TiresUsedMiles = tiresUsedMiles;
+    //     StravaBikeId = stravaBikeId;
+    //     StravaBikeName = stravaBikeName;
+    //     TotalMiles = totalMiles;
+    //     StravaUserId = stravaUserId;
+    //     DropperUsedMiles = dropperUsedMiles;
+    // }
     public void Display()
     {
-        Console.WriteLine("Bike ID: " + Id);
+        Console.WriteLine("ID: " + Id);
         Console.WriteLine("Strava Bike ID: " + StravaBikeId);
         Console.WriteLine("Strava Bike Name: " + StravaBikeName);
         Console.WriteLine("Strava User ID: " + StravaUserId);

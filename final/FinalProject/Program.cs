@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         // Console.WriteLine("Hello FinalProject World!");
+        AllData allData = new AllData("part_data.csv");
         bool finished = false;
         while (!finished)
         {
@@ -24,14 +25,22 @@ class Program
                     break;
                 case "4":
                     Console.WriteLine("Display all bikes");
+                    AllData allBikes = new AllData("part_data.csv");
+                    foreach(Bike currentBike in allBikes.BikesList)
+                    {
+                        currentBike.Display();
+                    }
+                    Console.WriteLine($"Just displayed {allBikes.BikesList.Count} bikes");
                     break;
                 case "5":
-                    Console.WriteLine("Display all parts in a bike");
+                    Console.WriteLine("Display all parts on a bike");
                     break;
                 case "6":
                     Console.WriteLine("Display all users");
                     break;
-                
+                case "7":
+                    Console.WriteLine("Export all Data into a text file");
+                    break;
                 case "8":
                     Console.WriteLine("Exit");
                     finished = true;
@@ -54,7 +63,6 @@ class Program
         Console.WriteLine($"Shop now has {shop.Bikes.Count} bikes");
         
         // Test AllData class
-        AllData allData = new AllData("part_data.csv");
         // allData.BikesList.Add(bike);
         Console.WriteLine($"AllData has {allData.BikesList.Count} bikes");
         

@@ -27,8 +27,8 @@ class AllData
             b.StravaUserId = int.Parse(parts[15]);
             b.DropperUsedMiles = int.Parse(parts[16]);
             BikesList.Add(b);
-            Console.WriteLine(b);
-            b.Display();
+            // Console.WriteLine(b);
+            // b.Display();
 
             // Id = int.Parse(values[0]),
             // ChainUsedMiles = int.Parse(values[1]),

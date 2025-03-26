@@ -19,7 +19,7 @@ class Program
         Console.WriteLine($"Shop now has {shop.Bikes.Count} bikes");
         
         // Test AllData class
-        AllData allData = new AllData();
+        AllData allData = new AllData("part_data.csv");
         allData.BikesList.Add(bike);
         Console.WriteLine($"AllData has {allData.BikesList.Count} bikes");
         

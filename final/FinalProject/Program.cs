@@ -25,12 +25,12 @@ class Program
                     break;
                 case "4":
                     Console.WriteLine("Display all bikes");
-                    AllData allBikes = new AllData("part_data.csv");
-                    foreach(Bike currentBike in allBikes.BikesList)
+                    // AllData allBikes = new AllData("part_data.csv");
+                    foreach(Bike currentBike in allData.BikesList)
                     {
                         currentBike.Display();
                     }
-                    Console.WriteLine($"Just displayed {allBikes.BikesList.Count} bikes");
+                    Console.WriteLine($"Just displayed {allData.BikesList.Count} bikes");
                     break;
                 case "5":
                     Console.WriteLine("Display all parts on a bike");

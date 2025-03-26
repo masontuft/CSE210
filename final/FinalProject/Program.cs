@@ -26,12 +26,13 @@ class Program
                     Console.WriteLine("Display all bikes");
                     break;
                 case "5":
-                    Console.WriteLine("Display all parts");
+                    Console.WriteLine("Display all parts in a bike");
                     break;
                 case "6":
                     Console.WriteLine("Display all users");
                     break;
-                case "7":
+                
+                case "8":
                     Console.WriteLine("Exit");
                     finished = true;
                     break;
@@ -73,8 +74,9 @@ class Program
         Console.WriteLine("2. Add a part");
         Console.WriteLine("3. Add a user");
         Console.WriteLine("4. Display all bikes");
-        Console.WriteLine("5. Display all parts");
+        Console.WriteLine("5. Display all parts on a bike");
         Console.WriteLine("6. Display all users");
-        Console.WriteLine("7. Exit");
+        Console.WriteLine("7. Export all Data into a text file");
+        Console.WriteLine("8. Exit");
     }
 }

@@ -64,6 +64,31 @@ public class Bike : Shop
     //     StravaUserId = stravaUserId;
     //     DropperUsedMiles = dropperUsedMiles;
     // }
+    public void BikesMenu(List<Bike> Bikes)
+    {
+        int i = 0;
+        foreach (Bike bike in Bikes)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"Bike number: {i}");
+            Console.WriteLine($"{bike.Id}");
+            Console.WriteLine($"{bike.StravaBikeId}");
+            Console.WriteLine($"{bike.StravaBikeName}");
+            Console.WriteLine($"{bike.StravaUserId}");
+            i++;
+        }
+    }
+
+    // public void FindBike(string id)
+    // {
+    //     foreach (Bike bike in Bikes)
+    //     {
+    //         if (bike.StravaBikeId == id)
+    //         {
+    //             bike.Display();
+    //         }
+    //     }
+    // }
     public void Display()
     {
         Console.WriteLine("ID: " + Id);

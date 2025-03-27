@@ -6,6 +6,7 @@ class Program
     {
         // Console.WriteLine("Hello FinalProject World!");
         AllData allData = new AllData("part_data.csv");
+        Bike bike = new Bike();
         bool finished = false;
         while (!finished)
         {
@@ -16,6 +17,13 @@ class Program
             {
                 case "1":
                     Console.WriteLine("View a bike");
+                    // allData.BikesList[0].Display();
+                    bike.BikesMenu(allData.BikesList);
+                    Console.Write("Enter the number of the bike you want to view: ");
+                    int choice = int.Parse(Console.ReadLine());
+                    // bike.FindBike(allData.BikesList[choice].StravaBikeId);
+                    Console.Clear();
+                    allData.BikesList[choice].Display();
                     break;
                 case "2":
                     Console.WriteLine("Edit a part");
@@ -55,7 +63,7 @@ class Program
         Console.WriteLine($"Created shop with {shop.Bikes.Count} bikes");
         
         // Test creating a bike
-        Bike bike = new Bike();
+        // Bike bike = new Bike();
         Console.WriteLine("Created a bike");
         
         // Test adding the bike to the shop
@@ -78,7 +86,7 @@ class Program
     }
     public void Menu()
     {
-        Console.WriteLine("1. Add a bike");
+        Console.WriteLine("1. View a bike");
         Console.WriteLine("2. Add a part");
         Console.WriteLine("3. Add a user");
         Console.WriteLine("4. Display all bikes");

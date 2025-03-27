@@ -1,0 +1,5 @@
+id,"shop_name","email","password","sub_Id","invoice_Id","plan_type","shop_code","shop_token","phone_number","sub_activity","Auth0_sub_id"
+12,"Apple Test","Mason","60d3109db5471fc5e2a834644c8501d6d2e1a5300c31e76cad465241688e24b2","fadsjkl;fdsajkl;fdajkl","7","basic","deRnewiSmOrw","0ivkOhajBGERHhS9At2cEyHrosvLhLk7","12345678901","active",""
+13,"JMR Cycling","masontuft@gmail.com","e7bf8b5555fe0a5a111923eeb569eca6bcb4ac1650faeb6fcb2adc658fd85bef","adminusers","1","pro","JMR153","TlcckoxIWxk6y7OWk7HWJzEnIu1H2QWg","12088663640","active","auth0|62eca7b53ab935c46f20130a"
+26,"Rolling H Cycles","rollinghcycles@gmail.com","f889b52ff7fa090f333c623ea1c9443a313e7db2beeb80a64b2342d3e56e9a45","pilot","2","premium","RHC347","kk3snFLGa3F6M70zCray3SUnA9jPQ8WD","12084667655","active","auth0|62f16aecc0c6c7196cf52199"
+53,"Test Shop","jmrcycling@gmail.com",NULL,"test","test","basic","TS693","C1l7JkNcjxH3GwIpLcsuf3RbdWmJpaZM","2088663640","active","auth0|67702b1f38615f4ceda51813"

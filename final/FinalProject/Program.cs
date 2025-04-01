@@ -56,6 +56,11 @@ class Program
                     break;
                 case "5":
                     Console.WriteLine("Display all parts on a bike");
+                    bike.BikesMenu(allData.BikesList);
+                    Console.Write("Enter the bike number of the bike you want to view: ");
+                    int bikeIndex = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    bike.DisplayBikeByIndex(allData.BikesList, bikeIndex);
                     break;
                 case "6":
                     Console.WriteLine("Display all users");

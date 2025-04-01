@@ -133,4 +133,32 @@ public class Bike : AllData
             Console.WriteLine($"No bikes found for user ID {userId}");
         }
     }
+    public void DisplayBikeByIndex(List<Bike> bikes, int index)
+    {
+        if (index >= 0 && index < bikes.Count)
+        {
+            // BikesList[index].Display();
+            StravaBikeId = bikes[index].StravaBikeId;
+            StravaBikeName = bikes[index].StravaBikeName;
+            StravaUserId = bikes[index].StravaUserId;
+            ChainUsedMiles = bikes[index].ChainUsedMiles;
+            CassetteUsedMiles = bikes[index].CassetteUsedMiles;
+            FrontForkUsedMiles = bikes[index].FrontForkUsedMiles;
+            RearShockUsedMiles = bikes[index].RearShockUsedMiles;
+            ChainRingUsedMiles = bikes[index].ChainRingUsedMiles;
+            BottomBracketUsedMiles = bikes[index].BottomBracketUsedMiles;
+            SealantUsedHours = bikes[index].SealantUsedHours;
+            BrakePadsUsedMiles = bikes[index].BrakePadsUsedMiles;
+            BrakeRotorsUsedMiles = bikes[index].BrakeRotorsUsedMiles;
+            TiresUsedMiles = bikes[index].TiresUsedMiles;
+            TotalMiles = bikes[index].TotalMiles;
+            DropperUsedMiles = bikes[index].DropperUsedMiles;
+            Display();
+        }
+        else
+        {
+            Console.WriteLine("Invalid bike index.");
+        }
+        
+    }
 }

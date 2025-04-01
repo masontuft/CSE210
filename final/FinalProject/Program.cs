@@ -7,6 +7,7 @@ class Program
         // Console.WriteLine("Hello FinalProject World!");
         AllData allData = new AllData("part_data.csv");
         Bike bike = new Bike();
+        User user = new User("users.csv");
         bool finished = false;
         while (!finished)
         {
@@ -79,7 +80,7 @@ class Program
         Console.WriteLine("Created a part");
         
         // Test creating a User
-        User user = new User();
+        
         Console.WriteLine("Created a user");
         
         Console.WriteLine("All tests completed successfully");

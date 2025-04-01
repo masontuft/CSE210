@@ -13,7 +13,7 @@ public class User
     public string ShopActivity;
     public static List<User> UsersList = new List<User>();
 
-    User(string filename)
+    public User(string filename)
     {
         // Skip the header row with Skip(1)
         var lines = File.ReadAllLines(filename).Skip(1);
@@ -35,37 +35,37 @@ public class User
         }
         
         // Now you can work with the users in the list
-        foreach (var user in UsersList)
-        {
-            Console.WriteLine($"User: {user.FirstName} {user.LastName}, Email: {user.Email}");
-        }
+        // foreach (var user in UsersList)
+        // {
+        //     Console.WriteLine($"User: {user.FirstName} {user.LastName}, StravaUserId: {user.StravaUserId}");
+        // }
     }
     public User()
     {
         string filename = "users.csv";
         // Skip the header row with Skip(1)
-        var lines = File.ReadAllLines(filename).Skip(1);
-        foreach (string line in lines)
-        {
-            string[] parts = line.Split(',');
-            User user = new User();
-            user.StravaUserId = int.Parse(parts[0]);
-            user.FirstName = parts[1];
-            user.LastName = parts[2];
-            user.StravaAccessToken = parts[3];
-            user.StravaRefreshToken = parts[4];
-            user.StravaAccessTokenExpiresAt = int.Parse(parts[5]);
-            user.ExpoPushToken = parts[6];
-            user.ShopToken = parts[7];
-            user.Email = parts[8];
-            user.ShopActivity = parts[9];
-            UsersList.Add(user);
-        }
+        // var lines = File.ReadAllLines(filename).Skip(1);
+        // foreach (string line in lines)
+        // {
+        //     string[] parts = line.Split(',');
+        //     User user = new User();
+        //     user.StravaUserId = int.Parse(parts[0]);
+        //     user.FirstName = parts[1];
+        //     user.LastName = parts[2];
+        //     user.StravaAccessToken = parts[3];
+        //     user.StravaRefreshToken = parts[4];
+        //     user.StravaAccessTokenExpiresAt = int.Parse(parts[5]);
+        //     user.ExpoPushToken = parts[6];
+        //     user.ShopToken = parts[7];
+        //     user.Email = parts[8];
+        //     user.ShopActivity = parts[9];
+        //     UsersList.Add(user);
+        // }
         
-        // Now you can work with the users in the list
-        foreach (var user in UsersList)
-        {
-            Console.WriteLine($"User: {user.FirstName} {user.LastName}, Email: {user.Email}");
-        }
+        // // Now you can work with the users in the list
+        // foreach (var user in UsersList)
+        // {
+        //     Console.WriteLine($"User: {user.FirstName} {user.LastName}, Email: {user.Email}");
+        // }
     }
 }

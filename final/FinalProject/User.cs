@@ -42,7 +42,8 @@ public class User
     }
     public User()
     {
-        string filename = "users.csv";
+        
+        // string filename = "users.csv";
         // Skip the header row with Skip(1)
         // var lines = File.ReadAllLines(filename).Skip(1);
         // foreach (string line in lines)

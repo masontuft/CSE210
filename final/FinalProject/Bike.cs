@@ -108,4 +108,25 @@ public class Bike : AllData
         Console.WriteLine("Total Miles: " + TotalMiles);
         Console.WriteLine("Dropper Used Miles: " + DropperUsedMiles);
     }
+
+    public void DisplayBikesByUserId(List<Bike> bikes, int userId)
+    {
+        bool found = false;
+        Console.WriteLine($"\nBikes for Strava User ID: {userId}\n");
+        
+        foreach (Bike bike in bikes)
+        {
+            if (bike.StravaUserId == userId)
+            {
+                bike.Display();
+                Console.WriteLine(); // Add space between bikes
+                found = true;
+            }
+        }
+        
+        if (!found)
+        {
+            Console.WriteLine($"No bikes found for user ID {userId}");
+        }
+    }
 }

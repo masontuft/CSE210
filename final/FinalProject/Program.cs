@@ -30,7 +30,14 @@ class Program
                     Console.WriteLine("Edit a part");
                     break;
                 case "3":
-                    Console.WriteLine("View a user");
+                    Console.WriteLine("View a user's bikes");
+                    foreach (User currentUser in User.UsersList)
+                    {
+                        Console.WriteLine($"User: {currentUser.FirstName} {currentUser.LastName}, StravaUserId: {currentUser.StravaUserId}");
+                    }
+                    Console.Write("Enter the Strava User ID of the user you want to view: ");
+                    int userId = int.Parse(Console.ReadLine());
+                    bike.DisplayBikesByUserId(allData.BikesList, userId);
                     break;
                 case "4":
                     Console.WriteLine("Display all bikes");
@@ -89,7 +96,7 @@ class Program
     {
         Console.WriteLine("1. View a bike");
         Console.WriteLine("2. Add a part");
-        Console.WriteLine("3. Add a user");
+        Console.WriteLine("3. View a user's bikes");
         Console.WriteLine("4. Display all bikes");
         Console.WriteLine("5. Display all parts on a bike");
         Console.WriteLine("6. Display all users");

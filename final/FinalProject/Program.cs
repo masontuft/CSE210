@@ -8,6 +8,7 @@ class Program
         AllData allData = new AllData("part_data.csv");
         Bike bike = new Bike();
         User user = new User("users.csv");
+        Shop shops = new Shop("shops.csv");
         bool finished = false;
         while (!finished)
         {
@@ -83,7 +84,7 @@ class Program
             }
         }
         // Test creating a shop
-        Shop shop = new Shop();
+        Shop shop = new Shop("shops.csv");
         Console.WriteLine($"Created shop with {shop.Bikes.Count} bikes");
         
         // Test creating a bike

@@ -1,11 +1,31 @@
 public class Shop
 {
-    public List<Bike> Bikes { get; set; }
+    public int Id;
+    public string ShopName;
+    public string Email;
+    public string Password;
+    public string SubId;
+    public string InvoiceId;
+    public string PlanType;
+    public string ShopCode;
+    public string ShopToken;
+    public long PhoneNumber; // Using long instead of int for phone numbers
+    public string SubActivity;
+    public string Auth0SubId;
+    public List<Bike> Bikes = new List<Bike>();
 
-    public Shop()
+    public Shop(string filename)
     {
-        Bikes = new List<Bike>();
+        var lines = File.ReadAllLines(filename).Skip(1);
+        foreach (string line in lines)
+        {
+            
+        }
     }
+    // {
+    //     Bikes = new List<Bike>();
+
+    // }
     
 }
 

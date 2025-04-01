@@ -64,6 +64,11 @@ class Program
                     break;
                 case "6":
                     Console.WriteLine("Display all users");
+                    foreach (User currentUser in User.UsersList)
+                    {
+                        Console.WriteLine($"User: {currentUser.FirstName} {currentUser.LastName}, StravaUserId: {currentUser.StravaUserId}");
+                    }
+                    Console.WriteLine($"Just displayed {User.UsersList.Count} users");
                     break;
                 case "7":
                     Console.WriteLine("Export all Data into a text file");

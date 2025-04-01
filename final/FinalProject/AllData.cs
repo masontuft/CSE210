@@ -26,8 +26,34 @@ public class AllData
             b.TotalMiles = int.Parse(parts[14]);
             b.StravaUserId = int.Parse(parts[15]);
             b.DropperUsedMiles = int.Parse(parts[16]);
+            string filename2 = "part_service_periods.csv";
+            var lines2 = File.ReadAllLines(filename2).Skip(1);
+            foreach (string line2 in lines2)
+            {
+                string[] parts2 = line2.Split(',');
+                if(b.StravaBikeId == parts[12])
+                {
+                    b.ChainMiles = int.Parse(parts2[1]);
+                    b.CassetteMiles = int.Parse(parts2[2]);
+                    b.FrontForkMiles = int.Parse(parts2[3]);
+                    b.RearShockMiles = int.Parse(parts2[4]);
+                    b.ChainRingMiles = int.Parse(parts2[5]);
+                    b.BottomBracketMiles = int.Parse(parts2[6]);
+                    b.SealantRefreshHours = int.Parse(parts2[7]);
+                    // b.BrakeBleedMiles = int.Parse(parts2[8]);
+                    b.BrakePadsMiles = int.Parse(parts2[9]);
+                    b.BrakeRotorsMiles = int.Parse(parts2[10]);
+                    b.TiresMiles = int.Parse(parts2[11]);
+                    // Chain type
+                    // Cassette type
+                    b.DropperMiles = int.Parse(parts2[15]);
+                }
+            }
             BikesList.Add(b);
         }
+
+        
+
         
     }
     public AllData()

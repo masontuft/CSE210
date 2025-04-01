@@ -2,24 +2,36 @@ public class Bike : AllData
 {
     public int Id;
     public int ChainUsedMiles;
+    public int ChainMiles;
     public int CassetteUsedMiles;
+    public int CassetteMiles;
     public int FrontForkUsedMiles;
+    public int FrontForkMiles;
     public int RearShockUsedMiles;
+    public int RearShockMiles;
     public int ChainRingUsedMiles;
+    public int ChainRingMiles;
     public int BottomBracketUsedMiles;
+    public int BottomBracketMiles;
     public int SealantUsedHours;
+    public int SealantRefreshHours;
     public int BrakePadsUsedMiles;
+    public int BrakePadsMiles;
     public int BrakeRotorsUsedMiles;
+    public int BrakeRotorsMiles;
     public int TiresUsedMiles;
+    public int TiresMiles;
     public string StravaBikeId;
     public string StravaBikeName;
     public int TotalMiles;
     public int StravaUserId;
     public int DropperUsedMiles;
+    public int DropperMiles;
     private List<Part> bike = new List<Part>();
     // Define properties and methods for the Bikes class here
     public Bike()
     {
+
         Id = 0;
         ChainUsedMiles = 0;
         CassetteUsedMiles = 0;
@@ -96,17 +108,28 @@ public class Bike : AllData
         Console.WriteLine("Strava Bike Name: " + StravaBikeName);
         Console.WriteLine("Strava User ID: " + StravaUserId);
         Console.WriteLine("Chain Used Miles: " + ChainUsedMiles);
+        Console.WriteLine("Chain Miles: " + ChainMiles);
         Console.WriteLine("Cassette Used Miles: " + CassetteUsedMiles);
+        Console.WriteLine("Cassette Miles: " + CassetteMiles);
         Console.WriteLine("Front Fork Used Miles: " + FrontForkUsedMiles);
+        Console.WriteLine("Front Fork Miles: " + FrontForkMiles);
         Console.WriteLine("Rear Shock Used Miles: " + RearShockUsedMiles);
+        Console.WriteLine("Rear Shock Miles: " + RearShockMiles);
         Console.WriteLine("Chain Ring Used Miles: " + ChainRingUsedMiles);
+        Console.WriteLine("Chain Ring Miles: " + ChainRingMiles);
         Console.WriteLine("Bottom Bracket Used Miles: " + BottomBracketUsedMiles);
+        Console.WriteLine("Bottom Bracket Miles: " + BottomBracketMiles);
         Console.WriteLine("Sealant Used Hours: " + SealantUsedHours);
+        Console.WriteLine("Sealant Refresh Hours: " + SealantRefreshHours);
         Console.WriteLine("Brake Pads Used Miles: " + BrakePadsUsedMiles);
+        Console.WriteLine("Brake Pads Miles: " + BrakePadsMiles);
         Console.WriteLine("Brake Rotors Used Miles: " + BrakeRotorsUsedMiles);
+        Console.WriteLine("Brake Rotors Miles: " + BrakeRotorsMiles);
         Console.WriteLine("Tires Used Miles: " + TiresUsedMiles);
-        Console.WriteLine("Total Miles: " + TotalMiles);
+        Console.WriteLine("Tires Miles: " + TiresMiles);
         Console.WriteLine("Dropper Used Miles: " + DropperUsedMiles);
+        Console.WriteLine("Dropper Miles: " + DropperMiles);
+        Console.WriteLine("Total Miles: " + TotalMiles);
     }
 
     public void DisplayBikesByUserId(List<Bike> bikes, int userIndex)

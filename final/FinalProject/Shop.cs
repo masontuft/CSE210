@@ -6,5 +6,6 @@ public class Shop
     {
         Bikes = new List<Bike>();
     }
+    
 }
 

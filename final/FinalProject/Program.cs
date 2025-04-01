@@ -31,13 +31,19 @@ class Program
                     break;
                 case "3":
                     Console.WriteLine("View a user's bikes");
+                    int i = 1;
                     foreach (User currentUser in User.UsersList)
                     {
+                        Console.WriteLine();
+                        Console.WriteLine($"User number: {i}");
                         Console.WriteLine($"User: {currentUser.FirstName} {currentUser.LastName}, StravaUserId: {currentUser.StravaUserId}");
+                        i++;
                     }
-                    Console.Write("Enter the Strava User ID of the user you want to view: ");
-                    int userId = int.Parse(Console.ReadLine());
-                    bike.DisplayBikesByUserId(allData.BikesList, userId);
+                    Console.WriteLine();
+                    Console.Write("Enter the user number of the user you want to view: ");
+                    int userIndex = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    bike.DisplayBikesByUserId(allData.BikesList, userIndex);
                     break;
                 case "4":
                     Console.WriteLine("Display all bikes");

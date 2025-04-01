@@ -109,10 +109,14 @@ public class Bike : AllData
         Console.WriteLine("Dropper Used Miles: " + DropperUsedMiles);
     }
 
-    public void DisplayBikesByUserId(List<Bike> bikes, int userId)
+    public void DisplayBikesByUserId(List<Bike> bikes, int userIndex)
     {
         bool found = false;
+        int userId = User.UsersList[userIndex - 1].StravaUserId;
+        Console.WriteLine($"User First Name: {User.UsersList[userIndex - 1].FirstName}");
+        Console.WriteLine($"User Last Name: {User.UsersList[userIndex - 1].LastName}");
         Console.WriteLine($"\nBikes for Strava User ID: {userId}\n");
+        
         
         foreach (Bike bike in bikes)
         {

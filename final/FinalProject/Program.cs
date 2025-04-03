@@ -28,7 +28,9 @@ class Program
                     allData.BikesList[choice].Display();
                     break;
                 case "2":
-                    Console.WriteLine("Edit a part");
+                    Console.WriteLine("View a shop");
+                    shops.ShopsList[0].Display();
+
                     break;
                 case "3":
                     Console.WriteLine("View a user's bikes");
@@ -113,7 +115,7 @@ class Program
     public void Menu()
     {
         Console.WriteLine("1. View a bike");
-        Console.WriteLine("2. Add a part");
+        Console.WriteLine("2. View a Shop");
         Console.WriteLine("3. View a user's bikes");
         Console.WriteLine("4. Display all bikes");
         Console.WriteLine("5. Display all parts on a bike");

@@ -28,11 +28,6 @@ class Program
                     allData.BikesList[choice].Display();
                     break;
                 case "2":
-                    Console.WriteLine("View a shop");
-                    shops.ShopsList[0].Display();
-
-                    break;
-                case "3":
                     Console.WriteLine("View a user's bikes");
                     int i = 1;
                     foreach (User currentUser in User.UsersList)
@@ -48,7 +43,7 @@ class Program
                     Console.Clear();
                     bike.DisplayBikesByUserId(allData.BikesList, userIndex);
                     break;
-                case "4":
+                case "3":
                     Console.WriteLine("Display all bikes");
                     // AllData allBikes = new AllData("part_data.csv");
                     foreach(Bike currentBike in allData.BikesList)
@@ -57,7 +52,7 @@ class Program
                     }
                     Console.WriteLine($"Just displayed {allData.BikesList.Count} bikes");
                     break;
-                case "5":
+                case "4":
                     Console.WriteLine("Display all parts on a bike");
                     bike.BikesMenu(allData.BikesList);
                     Console.Write("Enter the bike number of the bike you want to view: ");
@@ -65,7 +60,7 @@ class Program
                     Console.Clear();
                     bike.DisplayBikeByIndex(allData.BikesList, bikeIndex);
                     break;
-                case "6":
+                case "5":
                     Console.WriteLine("Display all users");
                     foreach (User currentUser in User.UsersList)
                     {
@@ -74,10 +69,34 @@ class Program
                     }
                     Console.WriteLine($"Just displayed {User.UsersList.Count} users");
                     break;
+                case "6":
+                    Console.WriteLine("View all shops");
+                    foreach (Shop currentShop in shops.ShopsList)
+                    {
+                        currentShop.Display();
+                        Console.WriteLine();
+                    }
+                    break;
                 case "7":
-                    Console.WriteLine("Export all Data into a text file");
+                    Console.WriteLine("View a shop");
+                    int j = 1;
+                    foreach (Shop currentShop in shops.ShopsList)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"Shop number: {j}");
+                        Console.WriteLine($"Shop: {currentShop.ShopName}");
+                        j++;
+                    }
+                    Console.WriteLine("Enter the number of the shop you want to view: ");
+                    int shopIndex = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    shopIndex--;
+                    shops.DisplayShopByIndex(shops.ShopsList, shopIndex);
                     break;
                 case "8":
+                    Console.WriteLine("Export all Data into a text file");
+                    break;
+                case "9":
                     Console.WriteLine("Exit");
                     finished = true;
                     break;
@@ -115,12 +134,13 @@ class Program
     public void Menu()
     {
         Console.WriteLine("1. View a bike");
-        Console.WriteLine("2. View a Shop");
-        Console.WriteLine("3. View a user's bikes");
-        Console.WriteLine("4. Display all bikes");
-        Console.WriteLine("5. Display all parts on a bike");
-        Console.WriteLine("6. Display all users");
-        Console.WriteLine("7. Export all Data into a text file");
-        Console.WriteLine("8. Exit");
+        Console.WriteLine("2. View a user's bikes");
+        Console.WriteLine("3. Display all bikes");
+        Console.WriteLine("4. Display all parts on a bike");
+        Console.WriteLine("5. Display all users");
+        Console.WriteLine("6. View all shops");
+        Console.WriteLine("7. View a shop");
+        Console.WriteLine("8. Export all Data into a text file");
+        Console.WriteLine("9. Exit");
     }
 }

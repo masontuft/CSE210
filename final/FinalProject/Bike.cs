@@ -103,9 +103,11 @@ public class Bike : AllData
     // }
     public void Display()
     {
+        Console.WriteLine();
+        Console.WriteLine("Strava Bike Name: " + StravaBikeName);
+        Console.WriteLine();
         Console.WriteLine("ID: " + Id);
         Console.WriteLine("Strava Bike ID: " + StravaBikeId);
-        Console.WriteLine("Strava Bike Name: " + StravaBikeName);
         Console.WriteLine("Strava User ID: " + StravaUserId);
         Console.WriteLine("Chain Used Miles: " + ChainUsedMiles);
         Console.WriteLine("Chain Miles: " + ChainMiles);

@@ -22,15 +22,15 @@ public class User
             string[] parts = line.Split(',');
             User user = new User();
             user.StravaUserId = int.Parse(parts[0]);
-            user.FirstName = parts[1];
-            user.LastName = parts[2];
-            user.StravaAccessToken = parts[3];
-            user.StravaRefreshToken = parts[4];
+            user.FirstName = parts[1].Trim('"',' ');
+            user.LastName = parts[2].Trim('"',' ');
+            user.StravaAccessToken = parts[3].Trim('"');
+            user.StravaRefreshToken = parts[4].Trim('"');
             user.StravaAccessTokenExpiresAt = int.Parse(parts[5]);
-            user.ExpoPushToken = parts[6];
-            user.ShopToken = parts[7];
-            user.Email = parts[8];
-            user.ShopActivity = parts[9];
+            user.ExpoPushToken = parts[6].Trim('"');
+            user.ShopToken = parts[7].Trim('"');
+            user.Email = parts[8].Trim('"');
+            user.ShopActivity = parts[9].Trim('"');
             UsersList.Add(user);
         }
         

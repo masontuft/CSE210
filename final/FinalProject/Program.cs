@@ -67,7 +67,8 @@ class Program
                     Console.WriteLine("Display all users");
                     foreach (User currentUser in User.UsersList)
                     {
-                        Console.WriteLine($"User: {currentUser.FirstName} {currentUser.LastName}, StravaUserId: {currentUser.StravaUserId}");
+                        Console.WriteLine($"User: {currentUser.FirstName} {currentUser.LastName}\n StravaUserId: {currentUser.StravaUserId}");
+                        Console.WriteLine();
                     }
                     Console.WriteLine($"Just displayed {User.UsersList.Count} users");
                     break;

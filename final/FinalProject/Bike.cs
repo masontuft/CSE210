@@ -214,6 +214,21 @@ public class Bike
     }
     public string GetBike()
     {
-        return $"Bike ID: {Id}, \nStravaBikeId: {StravaBikeId}, \nTotalMiles: {TotalMiles} \nStravaUserId: {StravaUserId}, \nChainUsedMiles: {ChainUsedMiles}, \nCassetteUsedMiles: {CassetteUsedMiles}, \nFrontForkUsedMiles: {FrontForkUsedMiles}, \nRearShockUsedMiles: {RearShockUsedMiles}, \nChainRingUsedMiles: {ChainRingUsedMiles}, \nBottomBracketUsedMiles: {BottomBracketUsedMiles}, \nSealantUsedHours: {SealantUsedHours}, \nBrakePadsUsedMiles: {BrakePadsUsedMiles}, \nBrakeRotorsUsedMiles: {BrakeRotorsUsedMiles}, \nTiresUsedMiles: {TiresUsedMiles}, \nDropperUsedMiles: {DropperUsedMiles}\n\n";
+        return $"Bike ID: {Id}, \n" +
+               $"StravaBikeId: {StravaBikeId}, \n" +
+               $"TotalMiles: {TotalMiles}, \n" +
+               $"StravaUserId: {StravaUserId}, \n" +
+               $"Chain: {Chain}, \n" +
+               $"Cassette: {Cassette}, \n" +
+               $"FrontFork: {FrontFork}, \n" +
+               $"RearShock: {RearShock}, \n" +
+               $"ChainRing: {ChainRing}, \n" +
+               $"BottomBracket: {BottomBracket}, \n" +
+               $"Sealant: {Sealant}, \n" +
+               $"BrakePads: {BrakePads}, \n" +
+               $"BrakeRotors: {BrakeRotors}, \n" +
+               $"Tires: {Tires}, \n" +
+               $"Dropper: {Dropper}, \n" +
+                "\n\n";
     }
 }

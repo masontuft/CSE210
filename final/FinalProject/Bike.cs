@@ -1,4 +1,4 @@
-public class Bike : AllData
+public class Bike
 {
     public int Id;
     public int ChainUsedMiles;

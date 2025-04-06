@@ -74,6 +74,34 @@ public class AllData
     {
         BikesList = new List<Bike>();
     }
+
+    public void ExportToTextFile(string filename, Shop shops)
+    
+    {
+        using (StreamWriter writer = new StreamWriter(filename))
+        {
+            writer.WriteLine("------------------Bikes-------------------");
+            foreach (Bike bike in BikesList)
+            {
+                
+                writer.WriteLine(bike.GetBike());
+            }
+            writer.WriteLine("------------------Users-------------------");
+            foreach (User user in User.UsersList)
+            {
+                
+                writer.WriteLine(user.GetUser());
+            }
+
+            writer.WriteLine("------------------Shops-------------------");
+            // Shop shopInstance = new Shop();
+            foreach (Shop shop in shops.ShopsList)
+            {
+                
+                writer.WriteLine(shop.GetShop());
+            }
+        }
+    }
 }
 
     

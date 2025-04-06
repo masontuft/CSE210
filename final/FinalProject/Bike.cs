@@ -212,4 +212,8 @@ public class Bike
         }
         
     }
+    public string GetBike()
+    {
+        return $"Bike ID: {Id}, \nStravaBikeId: {StravaBikeId}, \nTotalMiles: {TotalMiles} \nStravaUserId: {StravaUserId}, \nChainUsedMiles: {ChainUsedMiles}, \nCassetteUsedMiles: {CassetteUsedMiles}, \nFrontForkUsedMiles: {FrontForkUsedMiles}, \nRearShockUsedMiles: {RearShockUsedMiles}, \nChainRingUsedMiles: {ChainRingUsedMiles}, \nBottomBracketUsedMiles: {BottomBracketUsedMiles}, \nSealantUsedHours: {SealantUsedHours}, \nBrakePadsUsedMiles: {BrakePadsUsedMiles}, \nBrakeRotorsUsedMiles: {BrakeRotorsUsedMiles}, \nTiresUsedMiles: {TiresUsedMiles}, \nDropperUsedMiles: {DropperUsedMiles}\n\n";
+    }
 }

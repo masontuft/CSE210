@@ -10,6 +10,7 @@ class Program
         User user = new User("users.csv");
         Shop shops = new Shop("shops.csv");
         bool finished = false;
+        bool saved = false;
         while (!finished)
         {
             Program program = new Program();
@@ -95,9 +96,22 @@ class Program
                     break;
                 case "8":
                     Console.WriteLine("Export all Data into a text file");
+                    Console.Write("Enter the filename to export to: ");
+                    string filename = Console.ReadLine();
+                    allData.ExportToTextFile(filename, shops);
+                    saved = true;
+                    Console.WriteLine($"Data exported to {filename}");
                     break;
                 case "9":
                     Console.WriteLine("Exit");
+                    if(saved == false)
+                    {
+                        Console.WriteLine("You have unsaved changes. Saving changes to data.txt");
+                        allData.ExportToTextFile("data.txt", shops);
+                        Console.WriteLine("Changes saved to data.txt");
+                        saved = true;
+                        
+                    }
                     finished = true;
                     break;
                 default:

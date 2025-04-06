@@ -69,4 +69,9 @@ public class User
         //     Console.WriteLine($"User: {user.FirstName} {user.LastName}, Email: {user.Email}");
         // }
     }
+
+    public string GetUser()
+    {
+        return $"First Name: {FirstName}, \nLast Name: {LastName}, \nStrava User ID: {StravaUserId}, \nStrava Access Token: {StravaAccessToken}, \nStrava Refresh Token: {StravaRefreshToken}, \nStrava Access Token Expires At: {StravaAccessTokenExpiresAt}, \nExpo Push Token: {ExpoPushToken}, \nShop Token: {ShopToken}, \nEmail: {Email}, \nShop Activity: {ShopActivity}\n\n";
+    }
 }

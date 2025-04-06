@@ -100,5 +100,20 @@ public class Shop
         Console.WriteLine($"Sub Activity: {SubActivity}");
         Console.WriteLine($"Auth0 Sub ID: {Auth0SubId}");
     }
+    public string GetShop()
+    {
+        // Replace with actual implementation to return shop details as a string
+        return "Shop Name: " + ShopName + "\n" +
+               "Email: " + Email + "\n" +
+               "Password: " + Password + "\n" +
+               "Sub ID: " + SubId + "\n" +
+               "Invoice ID: " + InvoiceId + "\n" +
+               "Plan Type: " + PlanType + "\n" +
+               "Shop Code: " + ShopCode + "\n" +
+               "Shop Token: " + ShopToken + "\n" +
+               "Phone Number: " + PhoneNumber + "\n" +
+               "Sub Activity: " + SubActivity + "\n" +
+               "Auth0 Sub ID: " + Auth0SubId + "\n\n";
+    }
 }
 

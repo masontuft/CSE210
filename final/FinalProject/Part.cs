@@ -16,7 +16,7 @@ public abstract class Part
 
     public override string ToString()
     {
-        return $"{Name} - {UsedMiles} miles used, {LifeMiles} miles life";
+        return $"{Name} - {UsedMiles} miles used out of {LifeMiles} life miles";
     }
 }
 

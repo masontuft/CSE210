@@ -188,23 +188,23 @@ public class Bike
     {
         if (index >= 0 && index < bikes.Count)
         {
-            // BikesList[index].Display();
-            StravaBikeId = bikes[index].StravaBikeId;
-            StravaBikeName = bikes[index].StravaBikeName;
-            StravaUserId = bikes[index].StravaUserId;
-            ChainUsedMiles = bikes[index].ChainUsedMiles;
-            CassetteUsedMiles = bikes[index].CassetteUsedMiles;
-            FrontForkUsedMiles = bikes[index].FrontForkUsedMiles;
-            RearShockUsedMiles = bikes[index].RearShockUsedMiles;
-            ChainRingUsedMiles = bikes[index].ChainRingUsedMiles;
-            BottomBracketUsedMiles = bikes[index].BottomBracketUsedMiles;
-            SealantUsedHours = bikes[index].SealantUsedHours;
-            BrakePadsUsedMiles = bikes[index].BrakePadsUsedMiles;
-            BrakeRotorsUsedMiles = bikes[index].BrakeRotorsUsedMiles;
-            TiresUsedMiles = bikes[index].TiresUsedMiles;
-            TotalMiles = bikes[index].TotalMiles;
-            DropperUsedMiles = bikes[index].DropperUsedMiles;
-            Display();
+            bikes[index].Display();
+            // StravaBikeId = bikes[index].StravaBikeId;
+            // StravaBikeName = bikes[index].StravaBikeName;
+            // StravaUserId = bikes[index].StravaUserId;
+            // ChainUsedMiles = bikes[index].ChainUsedMiles;
+            // CassetteUsedMiles = bikes[index].CassetteUsedMiles;
+            // FrontForkUsedMiles = bikes[index].FrontForkUsedMiles;
+            // RearShockUsedMiles = bikes[index].RearShockUsedMiles;
+            // ChainRingUsedMiles = bikes[index].ChainRingUsedMiles;
+            // BottomBracketUsedMiles = bikes[index].BottomBracketUsedMiles;
+            // SealantUsedHours = bikes[index].SealantUsedHours;
+            // BrakePadsUsedMiles = bikes[index].BrakePadsUsedMiles;
+            // BrakeRotorsUsedMiles = bikes[index].BrakeRotorsUsedMiles;
+            // TiresUsedMiles = bikes[index].TiresUsedMiles;
+            // TotalMiles = bikes[index].TotalMiles;
+            // DropperUsedMiles = bikes[index].DropperUsedMiles;
+            // Display();
         }
         else
         {

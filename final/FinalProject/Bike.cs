@@ -61,33 +61,6 @@ public class Bike
         StravaUserId = 0;
         DropperUsedMiles = 0;
     }
-    // public Bike(
-    //     int id, int chainUsedMiles, 
-    //     int cassetteUsedMiles, int frontForkUsedMiles, 
-    //     int rearShockUsedMiles, int chainRingUsedMiles, 
-    //     int bottomBracketUsedMiles, int sealantUsedHours, 
-    //     int brakePadsUsedMiles, int brakeRotorsUsedMiles, 
-    //     int tiresUsedMiles, string stravaBikeId, 
-    //     string stravaBikeName, int totalMiles, 
-    //     int stravaUserId, int dropperUsedMiles)
-    // {
-    //     Id = id;
-    //     ChainUsedMiles = chainUsedMiles;
-    //     CassetteUsedMiles = cassetteUsedMiles;
-    //     FrontForkUsedMiles = frontForkUsedMiles;
-    //     RearShockUsedMiles = rearShockUsedMiles;
-    //     ChainRingUsedMiles = chainRingUsedMiles;
-    //     BottomBracketUsedMiles = bottomBracketUsedMiles;
-    //     SealantUsedHours = sealantUsedHours;
-    //     BrakePadsUsedMiles = brakePadsUsedMiles;
-    //     BrakeRotorsUsedMiles = brakeRotorsUsedMiles;
-    //     TiresUsedMiles = tiresUsedMiles;
-    //     StravaBikeId = stravaBikeId;
-    //     StravaBikeName = stravaBikeName;
-    //     TotalMiles = totalMiles;
-    //     StravaUserId = stravaUserId;
-    //     DropperUsedMiles = dropperUsedMiles;
-    // }
     public void BikesMenu(List<Bike> Bikes)
     {
         int i = 0;
@@ -103,16 +76,6 @@ public class Bike
         }
     }
 
-    // public void FindBike(string id)
-    // {
-    //     foreach (Bike bike in Bikes)
-    //     {
-    //         if (bike.StravaBikeId == id)
-    //         {
-    //             bike.Display();
-    //         }
-    //     }
-    // }
     public void Display()
     {
         Console.WriteLine();
@@ -135,29 +98,6 @@ public class Bike
         if (Dropper != null) Console.WriteLine(Dropper.ToString());
         if (BrakeBleed != null) Console.WriteLine(BrakeBleed.ToString());
 
-        // Console.WriteLine("Chain Used Miles: " + ChainUsedMiles);
-        // Console.WriteLine("Chain Miles: " + ChainMiles);
-        // Console.WriteLine("Cassette Used Miles: " + CassetteUsedMiles);
-        // Console.WriteLine("Cassette Miles: " + CassetteMiles);
-        // Console.WriteLine("Front Fork Used Miles: " + FrontForkUsedMiles);
-        // Console.WriteLine("Front Fork Miles: " + FrontForkMiles);
-        // Console.WriteLine("Rear Shock Used Miles: " + RearShockUsedMiles);
-        // Console.WriteLine("Rear Shock Miles: " + RearShockMiles);
-        // Console.WriteLine("Chain Ring Used Miles: " + ChainRingUsedMiles);
-        // Console.WriteLine("Chain Ring Miles: " + ChainRingMiles);
-        // Console.WriteLine("Bottom Bracket Used Miles: " + BottomBracketUsedMiles);
-        // Console.WriteLine("Bottom Bracket Miles: " + BottomBracketMiles);
-        // Console.WriteLine("Sealant Used Hours: " + SealantUsedHours);
-        // Console.WriteLine("Sealant Refresh Hours: " + SealantRefreshHours);
-        // Console.WriteLine("Brake Pads Used Miles: " + BrakePadsUsedMiles);
-        // Console.WriteLine("Brake Pads Miles: " + BrakePadsMiles);
-        // Console.WriteLine("Brake Rotors Used Miles: " + BrakeRotorsUsedMiles);
-        // Console.WriteLine("Brake Rotors Miles: " + BrakeRotorsMiles);
-        // Console.WriteLine("Tires Used Miles: " + TiresUsedMiles);
-        // Console.WriteLine("Tires Miles: " + TiresMiles);
-        // Console.WriteLine("Dropper Used Miles: " + DropperUsedMiles);
-        // Console.WriteLine("Dropper Miles: " + DropperMiles);
-        // Console.WriteLine("Total Miles: " + TotalMiles);
     }
 
     public void DisplayBikesByUserId(List<Bike> bikes, int userIndex)
@@ -174,7 +114,7 @@ public class Bike
             if (bike.StravaUserId == userId)
             {
                 bike.Display();
-                Console.WriteLine(); // Add space between bikes
+                Console.WriteLine(); 
                 found = true;
             }
         }
@@ -189,22 +129,6 @@ public class Bike
         if (index >= 0 && index < bikes.Count)
         {
             bikes[index].Display();
-            // StravaBikeId = bikes[index].StravaBikeId;
-            // StravaBikeName = bikes[index].StravaBikeName;
-            // StravaUserId = bikes[index].StravaUserId;
-            // ChainUsedMiles = bikes[index].ChainUsedMiles;
-            // CassetteUsedMiles = bikes[index].CassetteUsedMiles;
-            // FrontForkUsedMiles = bikes[index].FrontForkUsedMiles;
-            // RearShockUsedMiles = bikes[index].RearShockUsedMiles;
-            // ChainRingUsedMiles = bikes[index].ChainRingUsedMiles;
-            // BottomBracketUsedMiles = bikes[index].BottomBracketUsedMiles;
-            // SealantUsedHours = bikes[index].SealantUsedHours;
-            // BrakePadsUsedMiles = bikes[index].BrakePadsUsedMiles;
-            // BrakeRotorsUsedMiles = bikes[index].BrakeRotorsUsedMiles;
-            // TiresUsedMiles = bikes[index].TiresUsedMiles;
-            // TotalMiles = bikes[index].TotalMiles;
-            // DropperUsedMiles = bikes[index].DropperUsedMiles;
-            // Display();
         }
         else
         {

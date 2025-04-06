@@ -53,18 +53,6 @@ public class Shop
         }
         Shop shop = Shops[index];
         shop.Display();
-        // Console.WriteLine($"Shop ID: {shop.Id}");
-        // Console.WriteLine($"Shop Name: {shop.ShopName}");
-        // Console.WriteLine($"Email: {shop.Email}");
-        // Console.WriteLine($"Password: {shop.Password}");
-        // Console.WriteLine($"Sub ID: {shop.SubId}");
-        // Console.WriteLine($"Invoice ID: {shop.InvoiceId}");
-        // Console.WriteLine($"Plan Type: {shop.PlanType}");
-        // Console.WriteLine($"Shop Code: {shop.ShopCode}");
-        // Console.WriteLine($"Shop Token: {shop.ShopToken}");
-        // Console.WriteLine($"Phone Number: {shop.PhoneNumber}");
-        // Console.WriteLine($"Sub Activity: {shop.SubActivity}");
-        // Console.WriteLine($"Auth0 Sub ID: {shop.Auth0SubId}");
     }
     public void DisplayShops(List<Shop> Shops)
     {
@@ -102,7 +90,7 @@ public class Shop
     }
     public string GetShop()
     {
-        // Replace with actual implementation to return shop details as a string
+
         return "Shop Name: " + ShopName + "\n" +
                "Email: " + Email + "\n" +
                "Password: " + Password + "\n" +

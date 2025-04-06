@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello FinalProject World!");
+
         AllData allData = new AllData("part_data.csv");
         Bike bike = new Bike();
         User user = new User("users.csv");
@@ -20,11 +20,10 @@ class Program
             {
                 case "1":
                     Console.WriteLine("View a bike");
-                    // allData.BikesList[0].Display();
+
                     bike.BikesMenu(allData.BikesList);
                     Console.Write("Enter the number of the bike you want to view: ");
                     int choice = int.Parse(Console.ReadLine());
-                    // bike.FindBike(allData.BikesList[choice].StravaBikeId);
                     Console.Clear();
                     allData.BikesList[choice].Display();
                     break;
@@ -46,7 +45,7 @@ class Program
                     break;
                 case "3":
                     Console.WriteLine("Display all bikes");
-                    // AllData allBikes = new AllData("part_data.csv");
+
                     foreach(Bike currentBike in allData.BikesList)
                     {
                         currentBike.Display();

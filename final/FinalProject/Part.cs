@@ -1,9 +1,9 @@
 
 public abstract class Part
 {
-    private string Name;
-    private int UsedMiles;
-    private int LifeMiles;
+    protected string Name;
+    protected int UsedMiles;
+    protected int LifeMiles;
 
     protected Part(string name, int usedMiles, int lifeMiles)
     {
@@ -60,6 +60,10 @@ public class Sealant : Part
 {
     public Sealant(string name, int usedMiles, int lifeMiles) : base(name, usedMiles, lifeMiles) { }
     public Sealant() : base() { }
+    public override string ToString()
+    {
+        return $"{Name} - {UsedMiles} hours used out of {LifeMiles} life hours";
+    }
 }
 
 public class BrakePads : Part
